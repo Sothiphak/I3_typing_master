@@ -13,8 +13,7 @@ A simple web application to help users test and assess their typing speed. Built
 - Responsive and user-friendly interface
 
 ## 📁 Project Structure
-
-- landing_page.html             # Landing page (this file)
+- index.html                    # Landing page (this file)
 - Login.html                    # Login page (you create this)
 - Register_password_page.html   # Registration page
 - Reset_password_page.html      # Reset password page

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Typing Speed Tester</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      background: #f4f7f6; 
+      color: #333;
+      display: flex;
+      flex-direction: column; 
+      align-items: center; 
+      min-height: 100vh;
+    }
+
+    
+    .navbar {
+      width: 100%;
+      background-color: #ffffff; 
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+      padding: 0;
+      display: flex;
+      justify-content: center; 
+      position: fixed; 
+      top: 0;
+      left: 0;
+      z-index: 1000; 
+    }
+
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      overflow-x: auto; 
+    }
+
+    .navbar li {
+      margin: 0;
+    }
+
+    .navbar a {
+      display: block;
+      padding: 18px 22px; 
+      text-decoration: none;
+      color: #333; 
+      font-weight: 500; 
+      transition: background-color 0.3s ease, color 0.3s ease;
+      white-space: nowrap; 
+    }
+
+    .navbar a:hover, .navbar a.active {
+      background-color: #007bff; 
+      color: white;
+    }
+
+    
+    .main-content {
+      text-align: center;
+      background: white;
+      padding: 60px 40px 40px; 
+      border-radius: 12px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.1); 
+      width: 90%;
+      max-width: 500px; 
+      margin-top: 100px; 
+    }
+
+    .main-content h1 {
+      font-size: 2.4rem; 
+      margin-bottom: 20px;
+      color: #2c3e50; 
+    }
+
+    .main-content p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    
+    .cta-button {
+      display: inline-block;
+      background-color: #007bff;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #0056b3; 
+      transform: translateY(-2px);
+    }
+
+    
+    @media (max-width: 768px) {
+      .navbar ul {
+        justify-content: flex-start; 
+      }
+      .navbar a {
+        padding: 15px 18px;
+        font-size: 0.95rem;
+      }
+      .main-content {
+        padding: 50px 20px 30px;
+        margin-top: 80px; 
+      }
+      .main-content h1 {
+        font-size: 2rem;
+      }
+    }
+    @media (max-width: 480px) {
+        .navbar a {
+            padding: 14px 12px;
+            font-size: 0.9rem;
+        }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="landing_page.html" class="active">Home</a></li> 
+      <li><a href="Login.html">Login</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="user_typingTest.html">Typing Test</a></li>
+      <li><a href="tes_result.html">Results</a></li>
+      <li><a href="Reset_password_page.html">Reset Password</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </nav>
+
+  <div class="main-content">
+    <h1>Welcome to Typing Speed Tester!</h1>
+    <p>Test your typing skills, track your progress, and become a faster typist today.</p>
+    <a href="user_typingTest.html" class="cta-button">Start Typing Test</a>
+  </div>
+
+</body>
+</html>
