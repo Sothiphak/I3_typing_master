@@ -27,5 +27,5 @@ A simple web application to help users test and assess their typing speed. Built
 ### 1. Clone or Download
 
 ```bash
-git clone https://github.com/your-username/typing-speed-tester.git
-cd typing-speed-tester
+git clone https://github.com/Sothiphak/I3_typing_master.git
+cd I3_TYPING_MASTER
