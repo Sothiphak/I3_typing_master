@@ -29,3 +29,7 @@ A simple web application to help users test and assess their typing speed. Built
 ```bash
 git clone https://github.com/Sothiphak/I3_typing_master.git
 cd I3_TYPING_MASTER
+- Just open `landing_page.html` in your browser.
+- No compilation, server, or frameworks needed.
+- Optional (for cleaner testing):**
+- Use VS Code + Live Server extension
