@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Test Results</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background: #f9fafb;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+      }
+
+      .container {
+        background: white;
+        margin-top: 40px;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        max-width: 700px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      li {
+        background: #f3f4f6;
+        padding: 12px;
+        border-radius: 6px;
+        margin-bottom: 10px;
+        font-size: 1rem;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+
+      button,
+      a {
+        background: #2563eb;
+        color: white;
+        padding: 10px 16px;
+        border: none;
+        border-radius: 6px;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 0.95rem;
+      }
+
+      button:hover,
+      a:hover {
+        background: #1e40af;
+      }
+
+      .no-results {
+        text-align: center;
+        color: #6b7280;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Your Typing Test Results</h1>
+      <ul id="resultsList"></ul>
+      <p class="no-results" id="noResultsMsg">No test results found.</p>
+
+      <div class="buttons">
+        <a href="typing-test.html">← Back to Test</a>
+        <button onclick="clearResults()">Clear All</button>
+      </div>
+    </div>
+
+    <script>
+      const resultsList = document.getElementById('resultsList');
+      const noResultsMsg = document.getElementById('noResultsMsg');
+
+      // Load and display results
+      function loadResults() {
+        const results = JSON.parse(localStorage.getItem('typingResults')) || [];
+
+        if (results.length === 0) {
+          noResultsMsg.style.display = 'block';
+          return;
+        }
+
+        noResultsMsg.style.display = 'none';
+        results.forEach((result, index) => {
+          const li = document.createElement('li');
+          li.textContent = ${index + 1}. ${result.date} - WPM: ${result.wpm}, Accuracy: ${result.accuracy}%;
+          resultsList.appendChild(li);
+        });
+      }
+
+      // Clear results
+      function clearResults() {
+        if (confirm("Are you sure you want to delete all test results?")) {
+          localStorage.removeItem('typingResults');
+          resultsList.innerHTML = '';
+          noResultsMsg.style.display = 'block';
+        }
+      }
+
+      loadResults();
+    </script>
+  </body>
+</html>
