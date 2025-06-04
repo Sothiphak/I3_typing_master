@@ -14,13 +14,13 @@ A simple web application to help users test and assess their typing speed. Built
 
 ## 📁 Project Structure
 
-- index.html            # Landing page (this file)
-- login.html            # Login page (you create this)
-- register.html         # Registration page
-- reset-password.html   # Reset password page
-- typing-test.html      # Typing test interface
-- results.html          # Typing test results
-- about.html            # About Us page
+- landing_page.html             # Landing page (this file)
+- Login.html                    # Login page (you create this)
+- Register_password_page.html   # Registration page
+- Reset_password_page.html      # Reset password page
+- user_typingTest.html          # Typing test interface
+- tes_result.html               # Typing test results
+- about.html                    # About Us page
 
 ## 🚀 Getting Started
 
