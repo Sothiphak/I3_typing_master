@@ -9,6 +9,8 @@ A simple web application to help users test and assess their typing speed. Built
   - Login page
   - Register page
   - Typing test
+  - Results
+  - Reset Password
   - About Us
 - Responsive and user-friendly interface
 
